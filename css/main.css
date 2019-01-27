@@ -1,0 +1,107 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    background-color: rgba(184,151,180,0.3);
+}
+
+header { 
+    height: 400px;
+    padding: 20px 0 0 0;
+
+    background-image: url(../picture/banner1.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+}
+
+header h1 {
+    color: whitesmoke;
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    margin-top: 200px;
+}
+
+.nav {
+    overflow: hidden;
+    float: top;
+    background-color: rgba(76,76,76);
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.nav li{
+    float: left;
+}
+
+.nav a {
+    padding: 14px 16px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.nav a:hover {
+    background-color: rgb(125,88,152);
+}
+
+.active {
+    background-color: rgb(125,88,152);
+}
+
+.introduction, .project-intro{
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-top: 100px;
+    padding-bottom: 150px;
+}
+
+.introduction img {
+    max-width: 50%;
+    height: auto;
+    margin-left: 25%;
+}
+
+.project-intro img {
+    max-width: 100%;
+    /* width:auto; */
+    height: auto;
+}
+
+.contact-info {
+    height: 250px;
+    background-color: rgba(184,151,180,0.5);
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.contact-info h2{
+    margin-left: 20%;
+    text-decoration: underline;
+}
+
+.contact-info table {
+    margin-left: 20%;
+    border-collapse: collapse;
+    border: none;
+}
+
+.contact-info th, td {
+    border: none;
+    padding: 15px;
+    text-align: left;
+}
+
+.contact-info tr:hover {
+    background-color: rgba(184,151,180,0.8);
+}
