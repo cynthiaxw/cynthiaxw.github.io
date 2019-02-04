@@ -104,3 +104,11 @@ header h1 {
 .contact-info tr:hover {
     background-color: rgba(184,151,180,0.8);
 }
+
+#refinement_sketch {
+    border-collapse: collapse;
+}
+#refinement_sketch th, td{
+    width: 50%;
+    border: 1px solid black;
+}
