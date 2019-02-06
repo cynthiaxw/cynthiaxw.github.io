@@ -76,6 +76,16 @@ header h1 {
     height: auto;
 }
 
+.refinement_sketch {
+    border-collapse: collapse;
+}
+.refinement_sketch th, .refinement_sketch td{
+    width: 50%;
+    border: 1px solid black;
+    padding: 15px;
+    text-align: left;
+}
+
 .contact-info {
     height: 250px;
     background-color: rgba(184,151,180,0.5);
@@ -95,7 +105,7 @@ header h1 {
     border: none;
 }
 
-.contact-info th, td {
+.contact-info th, .contact-info td {
     border: none;
     padding: 15px;
     text-align: left;
@@ -103,12 +113,4 @@ header h1 {
 
 .contact-info tr:hover {
     background-color: rgba(184,151,180,0.8);
-}
-
-#refinement_sketch {
-    border-collapse: collapse;
-}
-#refinement_sketch th, td{
-    width: 50%;
-    border: 1px solid black;
 }
