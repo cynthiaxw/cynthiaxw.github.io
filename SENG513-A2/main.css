@@ -1,0 +1,73 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+body {
+    font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
+}
+
+#calculator-body {
+    background-color: rgb(234, 234, 234);
+    color: black;
+    border: 1px black solid;
+    width: 560px;
+    height: 720px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 5px 10px 10px grey;
+    border-radius: 10px;
+
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.row {
+    width: 100%;
+    /* display: table; */
+    display: flex;
+    flex-flow: row wrap;
+    /* table-layout: fixed; */
+    margin: 0;
+}
+
+.column {
+    margin: 10px;
+}
+
+#answer-bar {
+    text-align: right;
+    font-size: 45px;
+    color: grey;
+    margin: 0;
+    margin-right: 30px;
+    border: none;
+}
+
+#display-bar {
+    background-color: white;
+    border: 1px black solid;
+    text-align: right;
+    padding: 15px;
+    font-size: 58px;
+    font-weight: bold;
+    height: 68px;
+}
+
+.btn {
+    background-color: rgb(190,209,246);
+    border-radius: 5px;
+    border: 1px black solid;
+    text-align: center;
+    width: 118px;
+    height: 63px;
+    padding: 13px 0;
+    margin: 10px;
+    font-size: 50px;
+    font-weight: 100;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: lightsteelblue;
+}

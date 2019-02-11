@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <title>Calculator</title>
+        <link rel="stylesheet" type="text/css" href="main1.css">
+        <meta name="viewport" content="width=device-width initial-scale = 1.0">
+    </head>
+    <body>
+        <div id="calculator-body">
+            <div class="row">
+                <div id="display-ans">Ans</div>
+            </div>
+            <div class="row">
+                <div id="display-current"> </div>
+            </div>
+            <div class="row">
+                <div class="btn btn-num" id="left">(</div>
+                <div class="btn btn-num" id="right">)</div>
+                <div class="btn btn-func" id="clear-entry">CE</div>
+                <div class="btn btn-func" id="last-ans">Ans</div>
+                <!-- <div class="btn btn-func" id="all-clear">AC</div> -->
+            </div>
+            <div class="row">
+                <div class="btn btn-num" id="seven">7</div>
+                <div class="btn btn-num" id="eight">8</div>
+                <div class="btn btn-num" id="nine">9</div>
+                <div class="btn btn-operator" id="divide">/</div>
+            </div>
+            <div class="row">
+                <div class="btn btn-num" id="four">4</div>
+                <div class="btn btn-num" id="five">5</div>
+                <div class="btn btn-num" id="six">6</div>
+                <div class="btn btn-operator" id="times">*</div>  
+            </div>
+            <div class="row">
+                <div class="btn btn-num" id="one">1</div>
+                <div class="btn btn-num" id="two">2</div>
+                <div class="btn btn-num" id="three">3</div>
+                <div class="btn btn-operator" id="minus">-</div>  
+            </div>
+            <div class="row last-row">
+                <div class="btn btn-num" id="one">0</div>
+                <div class="btn btn-num" id="decimal">.</div>
+                <div class="btn btn-func" id="equal">=</div>
+                <div class="btn btn-operator" id="plus">+</div>  
+            </div>
+        </div>
+
+        <script>
+        
+            // get number elements
+            var btn1 = document.getElementById('one');
+            var btn2 = document.getElementById('two');
+            var btn3 = document.getElementById('three');
+            var btn4 = document.getElementById('four');
+            var btn5 = document.getElementById('five');
+            var btn6 = document.getElementById('six');
+            var btn7 = document.getElementById('seven');
+            var btn8 = document.getElementById('eight');
+            var btn9 = document.getElementById('nine');
+            var btn0 = document.getElementById('zero');
+            var btnAns = document.getElementById('last-ans');
+
+            // get answer bar and display bar elements
+            var ansElement = document.getElementById('display-ans');
+            var displayElement = document.getElementById('display-current');
+            var clearEntryElement = document.getElementById('clear-entry');
+            // var allClearElement = document.getElementById('all-clear');
+            var ansBtn = document.getElementById('last-ans');
+            var equalSignElement = document.getElementById('equal');
+
+            // arrays of the button classes
+            var numButtons = document.getElementsByClassName('btn-num');
+            var allButtons = document.getElementsByClassName('btn');
+            var operatorButtons = document.getElementsByClassName('btn-operator');
+
+            // Finish calculating flag
+            var flg_finish = false;
+
+            // Add event listeners
+            var updateDisplayBar = (btnObj) => {
+                if(flg_finish === true){
+                    flg_finish = false;
+                    displayElement.innerText = btnObj.target.innerText;
+                } else{
+                    displayElement.innerText += btnObj.target.innerText;
+                }
+            }
+
+            var operatorDisplay = (btnObj) => {
+                if(flg_finish === true){
+                    flg_finish = false;
+                }
+                displayElement.innerText += btnObj.target.innerText;
+            }
+
+            for(let i=0; i<numButtons.length; i++){ // add listeners to all buttons
+                numButtons[i].addEventListener('click', updateDisplayBar);
+            }
+            for(let i=0; i<operatorButtons.length; i++){
+                operatorButtons[i].addEventListener('click', operatorDisplay);
+            }
+
+            ansBtn.onclick = () => {
+                if(flg_finish === true){
+                    flg_finish = false;
+                    displayElement.innerText = ansElement.innerText;
+                } else{
+                    displayElement.innerText += ansElement.innerText;
+                }
+            }
+            clearEntryElement.onclick = () => {
+                let strlen = displayElement.innerText.length;
+                let str = displayElement.innerText.slice(0, strlen);
+                displayElement.innerText = displayElement.innerText.slice(0, strlen-1);
+            }
+            // allClearElement.onclick = () =>{
+            //     displayElement.innerText = "";
+            // }
+            equalSignElement.onclick = () => {
+                let expression = displayElement.innerText;
+                if(expression.length !== 0 && expression !== "Error"){
+                    let current_answer;
+                    try {
+                        current_answer = eval(expression);
+                    } catch (e) {
+                        current_answer = "Error";
+                    }
+                    displayElement.innerText = current_answer;
+                    ansElement.innerText = current_answer;
+                }
+                flg_finish = true;
+            }
+
+
+
+        </script>
+    </body>
+</html>
