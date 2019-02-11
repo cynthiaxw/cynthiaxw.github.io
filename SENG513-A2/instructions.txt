@@ -1,0 +1,13 @@
+SENG513 Assignment 2
+Xi Wang (30057535)
+https://cynthiaxw.github.io/SENG513-A2/calculator.html
+Tested on Google Chrome.
+
+How to use the calculator:
+1. Support basic arithmetic operators (+, -, * and /) and parentheses.
+2. CE: backspace.
+3. AC: clear all.
+4. Ans: use the previous answer. 
+5. The answer will display on the top as well as on the input bar.  
+6. If the expression is invalid, "Error" will display. 
+7. After a calculation, use AC to clear all or enter a number to start a new calculation. If enter an operator, previous answer will be used.
