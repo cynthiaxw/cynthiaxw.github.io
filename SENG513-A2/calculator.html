@@ -38,12 +38,16 @@
                 <div class="btn btn-num" id="three">3</div>
                 <div class="btn btn-operator" id="minus">-</div>  
             </div>
-            <div class="row last-row">
-                <div class="btn btn-num" id="one">0</div>
+            <div class="row">
+                <div class="btn btn-num" id="zero">0</div>
                 <div class="btn btn-num" id="decimal">.</div>
-                <div class="btn btn-func" id="equal">=</div>
                 <div class="btn btn-operator" id="plus">+</div>  
             </div>
+            <div class="row">
+                <div class="btn btn-func" id="equal">=</div>
+                <div class="btn btn-func" id="all-clear">AC</div>
+            </div>
+
         </div>
 
         <script>
@@ -65,7 +69,7 @@
             var ansElement = document.getElementById('display-ans');
             var displayElement = document.getElementById('display-current');
             var clearEntryElement = document.getElementById('clear-entry');
-            // var allClearElement = document.getElementById('all-clear');
+            var allClearElement = document.getElementById('all-clear');
             var ansBtn = document.getElementById('last-ans');
             var equalSignElement = document.getElementById('equal');
 
@@ -114,9 +118,9 @@
                 let str = displayElement.innerText.slice(0, strlen);
                 displayElement.innerText = displayElement.innerText.slice(0, strlen-1);
             }
-            // allClearElement.onclick = () =>{
-            //     displayElement.innerText = "";
-            // }
+            allClearElement.onclick = () =>{
+                displayElement.innerText = "";
+            }
             equalSignElement.onclick = () => {
                 let expression = displayElement.innerText;
                 if(expression.length !== 0 && expression !== "Error"){
