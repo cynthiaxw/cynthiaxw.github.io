@@ -11,7 +11,7 @@ html body {
     font-weight: bold;
     text-align: center;
     width:auto;
-    height: 600px;
+    /* height: 600px; */
     max-width: 560px;
     margin: auto;
     padding: 20px;
