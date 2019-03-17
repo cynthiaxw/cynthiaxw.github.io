@@ -603,7 +603,7 @@
       <!--Refinement first row-->
       <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
         <div class="col-lg-6">
-          <img class="img-fluid" src="img/p1_rs12.jpeg" alt="">
+          <img class="img-fluid" src="img/p2_rs12.jpg" alt="">
         </div>
         <div class="col-lg-6">
           <div class="bg-black text-center h-100 project">
@@ -611,10 +611,9 @@
               <div class="project-text w-100 my-auto text-center text-lg-left">
                 <h4 class="text-white">Sketch 1&2, from Xi.</h4>
                 <p class="mb-0 text-white-50">
-                  Top: combination of eye oping and gas pedal ideas from Jason, using accelerometer and gyroscope to simulate a real
-                  gas pedal and make eyes open wider when the pedal is pressed hard.
-                  <br>Bottom: combined light sensor idea
-                  from Matt and the eyes oping idea, which led to our final design.
+                  Left: Simple logic and storyboard created after we implement some basic functionalities.
+                  <br>
+                  Right: Design of the appearance and some pseudocode for the story.
                 </p>
                 <hr class="d-none d-lg-block mb-0 ml-0">
               </div>
@@ -626,7 +625,7 @@
       <!--Refinement second row-->
       <div class="row justify-content-center no-gutters">
         <div class="col-lg-6">
-          <img class="img-fluid" src="img/p1_rs34.jpeg" alt="">
+          <img class="img-fluid" src="img/p2_rs34.jpg" alt="">
         </div>
         <div class="col-lg-6 order-lg-first">
           <div class="bg-black text-center h-100 project">
@@ -634,9 +633,7 @@
               <div class="project-text w-100 my-auto text-center text-lg-right">
                 <h4 class="text-white">Sketch 3&4, from Karn.</h4>
                 <p class="mb-0 text-white-50">
-                  Top: a variation of Fruit Ninja. Instead of using fruits, using different food depending
-                  on time.
-                  <br>Bottom: a small game of wire cutting to defuse the bomb.
+                    Ideas about the delay time and welcome/goodbye message.
                 </p>
                 <hr class="d-none d-lg-block mb-0 mr-0">
               </div>
@@ -648,7 +645,7 @@
       <!--Refinement third row-->
       <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
         <div class="col-lg-6">
-          <img class="img-fluid" src="img/p1_rs56.png" alt="">
+          <img class="img-fluid" src="img/p2_rs56.jpg" alt="">
         </div>
         <div class="col-lg-6">
           <div class="bg-black text-center h-100 project">
@@ -656,11 +653,7 @@
               <div class="project-text w-100 my-auto text-center text-lg-left">
                 <h4 class="text-white">Sketch 5&6, from Cole.</h4>
                 <p class="mb-0 text-white-50">
-                  Top: another variation of bomb defusing. Users can set a combination of the
-                  colored wire and cut the wire in a correct order to unlock the phone.
-                  <br>Bottom:
-                  Pick some photos from the user's gallery, hide Waldo in the background, and
-                  the user need to find Waldo to unlock.
+                  Ideas for the reset button and LED lights.
                 </p>
                 <hr class="d-none d-lg-block mb-0 ml-0">
               </div>
@@ -672,18 +665,18 @@
       <!--Refinement fourth row-->
       <div class="row justify-content-center no-gutters">
         <div class="col-lg-6">
-          <img class="img-fluid" src="img/p1_rs78.jpeg" alt="">
+          <img class="img-fluid" src="img/p2_rs7890.jpg" alt="">
         </div>
         <div class="col-lg-6 order-lg-first">
           <div class="bg-black text-center h-100 project">
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-right">
-                <h4 class="text-white">Sketch 7&8, from Jason.</h4>
+                <h4 class="text-white">Sketch 7&8&9&10, from Jason.</h4>
                 <p class="mb-0 text-white-50">
-                  Left: a variation of the gas pedal. Added some features such as speed meter, view window,
-                  and temperature measurement to make it more realistic.
-                  <br>Right: a variation of the water draining. Using gyroscope, rotate the phone to fill up
-                  the cup and unlock.
+                  Left: Copper wire hook.
+                  Right: a variation of the hook together with a buzzer.
+                  <br>Top: a storyboard.
+                  Button: adding an expire duration for the sensor.
                 </p>
                 <hr class="d-none d-lg-block mb-0 mr-0">
               </div>
@@ -692,30 +685,7 @@
         </div>
       </div>
 
-      <!--Refinement fifth row-->
-      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-        <div class="col-lg-6">
-          <img class="img-fluid" src="img/p1_rs90.jpeg" alt="">
-        </div>
-        <div class="col-lg-6">
-          <div class="bg-black text-center h-100 project">
-            <div class="d-flex h-100">
-              <div class="project-text w-100 my-auto text-center text-lg-left">
-                <h4 class="text-white">Sketch 9&10, from Matt. </h4>
-                <p class="mb-0 text-white-50">
-                  Left: another variation of water draining. The user need to fill up a certain amount
-                  of water into the cup, which can also serve as a password.
-                  <br>Right: another variation of bomb defusing. Similar to Cole's idea, cut the wires
-                  correctly, otherwise the bomb will explode.
-                </p>
-                <hr class="d-none d-lg-block mb-0 ml-0">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!--Sensor app -->
+      <!--Demo -->
       <div class="featured-text text-center text-lg-left">
         <p><br><br></p>
         <h4>Final Look and Design Decisions</h4>
@@ -726,12 +696,14 @@
           triggered accidentally. On the right side is a PIR motion sensor. The buzzer is placed
           at the bottom of the box. <br><br>
 
-          We use PIR motion sensor to detect the door open activity. Another input "sensor" is the hand made
+          We use PIR motion sensor to detect the door opening activity. There is a configurable time period between
+          triggering the sensor and firing the alarm, since in real cases, people would take several seconds to
+          take off their shoes and jackets before they hook up the keys. Another input "sensor" is the hand made
           Copper wire. We have considered many ways to detect key attachment including the range sensor and
-          weight sensor but finalized to Jason's Copper idea because this is simple and error free. A pair of Copper
+          weight sensor, but we finalized to Jason's Copper idea which is simple and error free. A pair of Copper
           wires connect to an input pin and the ground, so when a keychain is hooked, there will be a circuit,
-          and the digital pin state will change from HIGH to LOW. The button was added as we were refining our
-          design to improve the robustness of the product.<br><br>
+          and the digital pin state will change from HIGH to LOW. The reset button was added during refinement to improve
+          the robustness of the product.<br><br>
 
           The outputs consists of three pair of LED lights and a buzzer. As our system will have an expire time
           from last triggered alarm, and the PIR sensor is disabled in this period, so I added some lights features to indicate the system status.
@@ -752,7 +724,7 @@
         </p>
 
         <h4>Video Demonstration</h4>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/77lvM6Xu4eM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/v613tLKWtqA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
 
       <p><br><br></p>
