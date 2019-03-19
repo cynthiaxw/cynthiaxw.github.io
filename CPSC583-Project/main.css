@@ -1,0 +1,148 @@
+/* importing fonts from Google Font API */
+@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display');
+@import url('https://fonts.googleapis.com/css?family=Sarabun:300,300i,400,700');
+
+html {
+    background: #6E7E85;
+    min-width: 1280px;
+    min-height: 720px;
+    overflow: auto;
+
+    font-family: "Sarabun", sans-serif;
+    font-weight: 300;
+    color: white;
+    letter-spacing: 0.1em;
+}
+
+body {
+    padding: 20px;
+}
+
+h1{
+    font-family: "Major Mono Display", sans-serif;
+    font-size: 3em;
+
+    color: white;
+    letter-spacing: normal;
+    text-transform: lowercase;
+
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+h2 {
+    font-family: "Major Mono Display", sans-serif;
+    font-size: 1.5em;
+    letter-spacing: normal;
+    text-transform: lowercase;
+}
+
+h3 {
+    color: black;
+    font-family: "Sarabun", sans-serif;
+    font-size: 1.5em;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-transform: capitalize;
+    width: 90%;
+    margin: 20px auto;
+}
+
+/* styling an element through its ID */
+div#div_page_desc {
+    margin: 10px;
+}
+
+div#div_data_desc {
+    background: beige;
+    box-sizing: border-box;
+    padding: 10px 20px;
+
+    color: black;
+}
+
+div#div_visuals {
+    background: beige;
+    background-clip: content-box;
+    width: 100%;
+    height: 100%;
+    min-height: 700px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+div#div_buttons {
+    padding: 20px;
+}
+
+button {
+    background: beige;
+    border: none;
+    height: 30px;
+    padding: 0px 10px;
+
+    font-family: "Sarabun", sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+}
+
+button:hover {
+    background: darkturquoise;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: 0;
+}
+
+.svg_boxes {
+    background: white;
+    border: 1px solid lightgrey;
+    display: block;
+    width: 90%;
+    min-width: 1200px;
+    min-height: 100px;
+    /*box-sizing: border-box;*/
+    margin: 10px auto;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    /*shape-rendering: crispEdges;*/
+}
+
+.x.axis path {
+    display: none;
+}
+
+.line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}
+
+.legend1 {
+    display: block;
+    float: right;
+    margin-right: 20px;
+    min-width: 100px;
+    min-height: 100px;
+    background-color: grey;
+}
+
+.tooltip {
+    box-shadow: 0 0 5px #999999;
+    color: #333;
+    font-size: 12px;
+    left: 130px;
+    padding: 10px;
+    position: absolute;
+    text-align: left;
+    top: 95px;
+    z-index: 10;
+    display: block;
+    opacity: 0;
+}
