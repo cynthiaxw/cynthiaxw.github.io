@@ -76,8 +76,9 @@ div#div_buttons {
 }
 
 button {
-    background: beige;
-    border: none;
+    background: rgb(236,236,236);
+    border-radius: 5px;
+    border: 1px grey solid;
     height: 30px;
     padding: 0px 10px;
 
@@ -88,7 +89,7 @@ button {
 }
 
 button:hover {
-    background: darkturquoise;
+    background: rgb(189,201,224);
     cursor: pointer;
 }
 
@@ -105,23 +106,6 @@ button:focus {
     min-height: 100px;
     /*box-sizing: border-box;*/
     margin: 10px auto;
-}
-
-.axis path,
-.axis line {
-    fill: none;
-    stroke: #000;
-    /*shape-rendering: crispEdges;*/
-}
-
-.x.axis path {
-    display: none;
-}
-
-.line {
-    fill: none;
-    stroke: steelblue;
-    stroke-width: 1.5px;
 }
 
 .legend1 {
@@ -145,4 +129,25 @@ button:focus {
     z-index: 10;
     display: block;
     opacity: 0;
+}
+
+.domain,
+.tick,
+.tick path,
+.tick line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.domain text,
+.tick,
+.tick text {
+    fill: black;
+    stroke: none;
+    color: black;
+    font-family: "Sarabun", sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    font-style: normal;
 }
