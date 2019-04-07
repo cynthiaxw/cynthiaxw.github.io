@@ -424,6 +424,11 @@ function emptySelection(){
 
     d3.selectAll('.pop').remove();
 
+    d3.select('#selectionBtn')
+        .style('display', 'none');
+    d3.select('#btnText')
+        .style('display', 'none');
+
 }
 
 function setupPopup(){
