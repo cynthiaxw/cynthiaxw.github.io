@@ -402,8 +402,6 @@ function setSpiral3(data){
         .style('alignment-baseline', 'middle')
         .text('Finish')
         .style('display', 'none');
-
-    setupPopup();
 }
 
 function emptySelection(){
@@ -424,13 +422,6 @@ function emptySelection(){
         .style("stroke-width", "0")
         .style("opacity", 0.7);
 
-    d3.select('#vis-pop')
-        .style('display', 'none');
-    d3.select('#selectionBtn')
-        .style('display', 'none');
-    d3.select('#btnText')
-        .style('display', 'none');
-
     d3.selectAll('.pop').remove();
 
 }
@@ -438,9 +429,8 @@ function emptySelection(){
 function setupPopup(){
     d3.select('#v13_svg')
         .append("g")
-        .attr('id', "vis-pop")
-        .attr("transform", "translate(0,0)")
-        .style('display', 'none');
+        .attr('id', "vis-pop").attr('class', 'pop')
+        .attr("transform", "translate(0,0)");
 
     var w = d3.select('#v13_svg').node().getBoundingClientRect().width !== undefined ?
         d3.select('#v13_svg').node().getBoundingClientRect().width : WIDTH;
@@ -798,7 +788,6 @@ function createBrushing(){
                 onMouseOutBar(d);
             });
     }
-
     function onMouseOverBar(data){
         d3.select('#vis-pop-bar1')
             .selectAll('rect')
@@ -847,7 +836,7 @@ function createBrushing(){
         popUp.style('display', 'block');
         popUp.style('opacity', 0.8);
     }
-    function onMouseMoveBar(data){
+    function onMouseMoveBar(){
         popUp.style('left', (d3.event.layerX - 25) + 'px')
             .style('top', (d3.event.layerY + 10) + 'px');
     }
@@ -887,6 +876,9 @@ function createBrushing(){
             .style("fill", "rgb(106,169,205")
             .style("stroke", "grey")
             .style("stroke-width", "1px");
+
+        popUp.style('display', 'none');
+        popUp.style('opacity', 0);
     }
 }
 
@@ -895,8 +887,8 @@ function finishSelection(){
         alert("Too many selections!");
         return;
     }
-    d3.select('#vis-pop')
-        .style('display', 'block');
+
+    setupPopup();
     createBarChart1();
     createBarChart2();
     createBarChart3();
